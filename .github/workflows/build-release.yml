@@ -19,6 +19,12 @@ jobs:
   release:
     name: Build for ${{ matrix.arch }} (${{ matrix.id }})
     runs-on: ubuntu-latest
+
+    # ========== 添加以下两行 ==========
+    permissions:
+      contents: write   # 授予创建 Release 所需的写入权限
+    # ==================================
+
     strategy:
       fail-fast: false
       matrix:
@@ -39,14 +45,14 @@ jobs:
       CONFIG_CCACHE: y
     steps:
       - name: Checkout
-        uses: actions/checkout@v4   # 已升级到 v4
+        uses: actions/checkout@v4
 
       - name: Prepare Cache Key
         id: cache_key
         run: echo "timestamp=$(date +%s)" >> "$GITHUB_OUTPUT"
 
       - name: Setup Cache
-        uses: actions/cache@v5   # 已升级到 v5
+        uses: actions/cache@v5
         with:
           path: |
             ${{ env.CACHE_DIR }}
@@ -130,12 +136,12 @@ jobs:
           find "${{ github.workspace }}" -maxdepth 1 -type f \( -name "*.ipk" -o -name "*.apk" \) -exec ls -lh {} \;
 
       - name: Release and Upload Assets
-        uses: softprops/action-gh-release@v3   # 已升级到 v3
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.ref_name }}
           files: |
             *.ipk
-            *.apk
+            *.apk   # 如果编译不出来 .apk 也没关系，会跳过
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
