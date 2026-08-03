@@ -1,1 +1,333 @@
+# ========== FakeDNS 页面 ==========
+msgid "Domain names"
+msgstr "域名"
 
+msgid "Force Forward server (TCP)"
+msgstr "强制转发服务器 (TCP)"
+
+msgid "Force Forward server (UDP)"
+msgstr "强制转发服务器 (UDP)"
+
+msgid "Balancer Strategy"
+msgstr "负载均衡策略"
+
+msgid "leastPing"
+msgstr "最低延迟"
+
+msgid "leastPing requires observatory (see \"Extra Options\" tab) to be enabled."
+msgstr "leastPing 需要启用 observatory（见“额外选项”选项卡）。"
+
+msgid "roundRobin"
+msgstr "轮询"
+
+msgid "Address"
+msgstr "地址"
+
+msgid "自定义"
+msgstr "自定义"
+
+# ========== 常规设置 - 出站路由 ==========
+msgid "GeoIPDirectCodeList(IPv4)"
+msgstr "GeoIP 直连列表 (IPv4)"
+
+msgid "GeoIPDirectCodeList(IPv6)"
+msgstr "GeoIP 直连列表 (IPv6)"
+
+msgid "Hosts in these GeoIP sets will not be forwarded through Xray.Remove all items to forward all non-private hosts."
+msgstr "这些 GeoIP 集合中的主机不会通过 Xray 转发。删除所有项以转发所有非私有主机。"
+
+msgid "Bypassed IP"
+msgstr "绕过 IP"
+
+msgid "Requests to these IPs won't be forwarded through Xray."
+msgstr "发往这些 IP 的请求不会通过 Xray 转发。"
+
+msgid "Forwarded IP"
+msgstr "转发 IP"
+
+msgid "Requests to these IPs will always be handled by Xray(but still might be bypassed by Xray itself,like private addresses)."
+msgstr "发往这些 IP 的请求将始终由 Xray 处理（但仍可能被 Xray 自身绕过，如私有地址）。"
+
+msgid "Default Ports Policy"
+msgstr "默认端口策略"
+
+msgid "Forwarded"
+msgstr "转发"
+
+msgid "Bypassed TCP Ports"
+msgstr "绕过的 TCP 端口"
+
+msgid "Requests to these TCP Ports won't be forwarded through Xray."
+msgstr "发往这些 TCP 端口的请求不会通过 Xray 转发。"
+
+msgid "Bypassed UDP Ports"
+msgstr "绕过的 UDP 端口"
+
+msgid "Requests to these UDP Ports won't be forwarded through Xray."
+msgstr "发往这些 UDP 端口的请求不会通过 Xray 转发。"
+
+# ========== 添加规则对话框 ==========
+msgid "Source Address"
+msgstr "源地址"
+
+msgid "Fill an IP address or a rule like"
+msgstr "填写 IP 地址或类似规则"
+
+msgid "Source Port"
+msgstr "源端口"
+
+msgid "Leave empty to forward all ports."
+msgstr "留空以转发所有端口。"
+
+msgid "Destination Address"
+msgstr "目标地址"
+
+msgid "Leave empty to keep original address unchanged."
+msgstr "留空以保持原始地址不变。"
+
+msgid "Destination Port"
+msgstr "目标端口"
+
+msgid "Fill to keep original port unchanged."
+msgstr "填写以保持原始端口不变。"
+
+msgid "Domain names to associate"
+msgstr "关联的域名"
+
+msgid "Resolve these domains to Source Address above. Only possible when an IP address is used."
+msgstr "将这些域名解析到上面的源地址。仅当使用 IP 地址时可用。"
+
+msgid "Exempt rebind protection"
+msgstr "免除重绑定保护"
+
+msgid "Avoid dnsmasq filtering RFC1918 IP addresses (and some TESTNET addresses as well) from result."
+msgstr "避免 dnsmasq 从结果中过滤 RFC1918 IP 地址（以及一些 TESTNET 地址）。"
+
+msgid "Force Forward (TCP)"
+msgstr "强制转发 (TCP)"
+
+msgid "This destination must be forwarded through an outbound server."
+msgstr "此目标必须通过出站服务器转发。"
+
+msgid "Force Forward (UDP)"
+msgstr "强制转发 (UDP)"
+
+# ========== HTTPS Server 页面 ==========
+msgid "Enable Xray HTTPS Server"
+msgstr "启用 Xray HTTPS 服务器"
+
+msgid "This will start a HTTPS server which serves both as an inbound for Xray and a reverse proxy web server."
+msgstr "这将启动一个 HTTPS 服务器，同时作为 Xray 的入站和反向代理 Web 服务器。"
+
+msgid "Xray HTTPS Server Port"
+msgstr "Xray HTTPS 服务器端口"
+
+msgid "This port needs to be set"
+msgstr "此端口需要在防火墙设置中"
+
+msgid "manually in firewall settings."
+msgstr "手动设置。"
+
+msgid "Only protocols which support fallback are available. Note that REALITY does not support fallback right now."
+msgstr "仅支持支持回退的协议。注意 REALITY 目前不支持回退。"
+
+msgid "Decrypt Method"
+msgstr "解密方式"
+
+msgid "Stream Security"
+msgstr "流安全"
+
+msgid "Flow"
+msgstr "流控"
+
+msgid "Certificate File"
+msgstr "证书文件"
+
+msgid "Private Key File"
+msgstr "私钥文件"
+
+msgid "选择文件."
+msgstr "选择文件。"
+
+msgid "Fill user_id for vmess / VLESS, or password for shadowsocks / trojan (also supports Xray UUID Mapping)"
+msgstr "填写 vmess/VLESS 的 user_id，或 shadowsocks/trojan 的密码（也支持 Xray UUID 映射）"
+
+msgid "Default Fallback HTTP Server"
+msgstr "默认回退 HTTP 服务器"
+
+msgid "Only HTTP/1.1 supported here. For HTTP/2 upstream, use Fallback Servers below"
+msgstr "此处仅支持 HTTP/1.1。如需 HTTP/2 上游，请使用下方的回退服务器"
+
+msgid "Fallback Servers"
+msgstr "回退服务器"
+
+msgid "Specify upstream servers here."
+msgstr "在此指定上游服务器。"
+
+msgid "SNI"
+msgstr "SNI"
+
+msgid "ALPN"
+msgstr "ALPN"
+
+msgid "路径"
+msgstr "路径"
+
+msgid "Xver"
+msgstr "Xver"
+
+msgid "Destination Address"
+msgstr "目标地址"
+
+msgid "No server configured"
+msgstr "暂无配置"
+
+# ========== Extra Options 页面 ==========
+msgid "Xray Executable Path"
+msgstr "Xray 可执行文件路径"
+
+msgid "/usr/bin/xray (default, exist)"
+msgstr "/usr/bin/xray（默认，存在）"
+
+msgid "日志级别"
+msgstr "日志级别"
+
+msgid "Read Xray log in \"System Log\" or use `logread` command."
+msgstr "在“系统日志”中查看 Xray 日志，或使用 `logread` 命令。"
+
+msgid "Enable Access Log"
+msgstr "启用访问日志"
+
+msgid "Access log will also be written to System Log."
+msgstr "访问日志也将写入系统日志。"
+
+msgid "Enable DNS Log"
+msgstr "启用 DNS 日志"
+
+msgid "DNS log will also be written to System Log."
+msgstr "DNS 日志也将写入系统日志。"
+
+msgid "Enable Xray API Service"
+msgstr "启用 Xray API 服务"
+
+msgid "Xray API Service uses port 8080 and GRPC protocol. Also callable via `xray api` or `Ubuntu call xray`. See here for help."
+msgstr "Xray API 服务使用端口 8080 和 GRPC 协议。也可通过 `xray api` 或 `Ubuntu call xray` 调用。查看帮助请点击此处。"
+
+msgid "Enable Statistics"
+msgstr "启用统计"
+
+msgid "Enable statistics of inbound / outbound data. Use Xray API to query values."
+msgstr "启用入站/出站数据统计。使用 Xray API 查询数值。"
+
+msgid "Enable Observatory"
+msgstr "启用延迟观测"
+
+msgid "Enable latency measurement for TCP and UDP outbounds."
+msgstr "启用 TCP 和 UDP 出站的延迟测量。"
+
+msgid "Enable Firewall Counters"
+msgstr "启用防火墙计数器"
+
+msgid "Add counters to firewall4 for transparent proxy rules. (Not supported in all OpenWrt versions.)"
+msgstr "为透明代理规则添加 firewall4 计数器。（并非所有 OpenWrt 版本都支持。）"
+
+msgid "Enable Xray Metrics Server"
+msgstr "启用 Xray Metrics 服务器"
+
+msgid "Enable built-in metrics server for pprof and expvar. See here for details."
+msgstr "启用内置的 pprof 和 expvar 指标服务器。详情请点击此处。"
+
+msgid "握手超时"
+msgstr "握手超时"
+
+msgid "Policy: Handshake timeout when connecting to upstream. See here for help."
+msgstr "策略：连接上游时的握手超时时间。查看帮助请点击此处。"
+
+msgid "Connection Idle Timeout"
+msgstr "连接空闲超时"
+
+msgid "Policy: Close connection if no data is transferred within given timeout. See here for help."
+msgstr "策略：如果在指定超时时间内没有数据传输，则关闭连接。查看帮助请点击此处。"
+
+msgid "Uplink Only Timeout"
+msgstr "仅上行超时"
+
+msgid "Policy: How long to wait before closing connection after server closed connection. See here for help."
+msgstr "策略：服务器关闭连接后等待多久再关闭连接。查看帮助请点击此处。"
+
+msgid "Downlink Only Timeout"
+msgstr "仅下行超时"
+
+msgid "Policy: How long to wait before closing connection after client closed connection. See here for help."
+msgstr "策略：客户端关闭连接后等待多久再关闭连接。查看帮助请点击此处。"
+
+msgid "缓冲区大小"
+msgstr "缓冲区大小"
+
+msgid "Policy: Internal cache size per connection. See here for help."
+msgstr "策略：每个连接的内部缓存大小。查看帮助请点击此处。"
+
+msgid "Show preview or deprecated features (requires reboot to take effect)."
+msgstr "显示预览或已弃用的功能（需要重启才能生效）。"
+
+msgid "Preview or Deprecated"
+msgstr "预览或已弃用"
+
+# ========== 网桥 (Bridge) ==========
+msgid "网桥"
+msgstr "网桥"
+
+msgid "Reverse proxy tool. Currently only client role (bridge) is supported. See here for help."
+msgstr "反向代理工具。目前仅支持客户端角色（网桥）。查看帮助请点击此处。"
+
+msgid "Upstream"
+msgstr "上游"
+
+msgid "域名"
+msgstr "域名"
+
+msgid "Redirect address"
+msgstr "重定向地址"
+
+# ========== Custom Options 页面 ==========
+msgid "Custom Configuration Hook"
+msgstr "自定义配置钩子"
+
+msgid "return function(config) {"
+msgstr "return function(config) {"
+
+msgid "Read ucode Documentation for the language used. Code filled here may need to change after upgrading luci-app-xray."
+msgstr "阅读所用语言的 ucode 文档。此处填写的代码在升级 luci-app-xray 后可能需要更改。"
+
+# ========== 状态信息（修正） ==========
+msgid "Kray is running"
+msgstr "Xray 正在运行"
+
+msgid "Xray is running"
+msgstr "Xray 正在运行"
+
+# ========== 下拉选项 ==========
+msgid "Please select"
+msgstr "请选择"
+
+msgid "默认"
+msgstr "默认"
+
+# ========== 其他 ==========
+msgid "Delete"
+msgstr "删除"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "No server configured"
+msgstr "尚无任何配置"
+
+msgid "Electrion"
+msgstr "Electrion"
+
+msgid "extgeopicloudflare.datcloudflare"
+msgstr "extgeopicloudflare.datcloudflare"
+
+msgid "Fill an IP address or a rule like electrin or extgeopicloudflare.datcloudflare"
+msgstr "填写 IP 地址或类似 electrin 或 extgeopicloudflare.datcloudflare 的规则"
