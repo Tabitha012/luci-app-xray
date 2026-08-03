@@ -11,12 +11,6 @@ on:
         required: true
         type: string
 
-# ====================================================
-# 关键修复：授予创建 Release 的写权限
-# ====================================================
-permissions:
-  contents: write
-
 env:
   PACKAGE_NAME: luci-app-xray
   CACHE_DIR: ~/cache
@@ -45,14 +39,14 @@ jobs:
       CONFIG_CCACHE: y
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4   # 已升级到 v4
 
       - name: Prepare Cache Key
         id: cache_key
         run: echo "timestamp=$(date +%s)" >> "$GITHUB_OUTPUT"
 
       - name: Setup Cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5   # 已升级到 v5
         with:
           path: |
             ${{ env.CACHE_DIR }}
@@ -136,9 +130,8 @@ jobs:
           find "${{ github.workspace }}" -maxdepth 1 -type f \( -name "*.ipk" -o -name "*.apk" \) -exec ls -lh {} \;
 
       - name: Release and Upload Assets
-        uses: softprops/action-gh-release@v3
+        uses: softprops/action-gh-release@v3   # 已升级到 v3
         with:
-          # 动态获取 tag：手动触发时使用输入的 tag，标签触发时使用 github.ref_name
           tag_name: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.ref_name }}
           files: |
             *.ipk
